@@ -1,6 +1,12 @@
 # VisualPoetry
 
-TODO: Write a gem description
+I made a poem using Angular and Sinatra: [snow flakes](http://snow-flakes.herokuapp.com 'snow flakes')
+
+But I more or less hand-coded the whole thing because I wasn't sure what I was
+doing. But then it was done and I'd figured it out, so this is where I'm trying
+to build a better tool for generating similar projects in the future.
+
+At least, that's the plan. I'm not sure what's going to happen.
 
 ## Installation
 
@@ -18,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TBD
 
 ## Contributing
 
