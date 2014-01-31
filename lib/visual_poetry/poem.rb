@@ -27,4 +27,8 @@ class VisualPoetry::Poem
     end
     css_content.join("\n")
   end
+
+  def css_file
+    File.open("#{title}.css", 'w') {|f| f << css }
+  end
 end
