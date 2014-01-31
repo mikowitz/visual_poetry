@@ -1,0 +1,27 @@
+.hidden, .hidden p {
+  color: #fff;
+  opacity: 0;
+  z-index: 0;
+}
+
+div {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+.current, .current-add, .current-add-active {
+  z-index: 1000;
+}
+
+.current-add-active, .current-remove {
+  opacity: 1;
+}
+
+.current-remove-active, .faded {
+  opacity: 0.05;
+}
+
+.faded {
+  z-index: 10;
+}

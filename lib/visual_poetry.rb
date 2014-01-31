@@ -3,5 +3,7 @@ require 'visual_poetry/fragment'
 require 'visual_poetry/poem'
 
 module VisualPoetry
-  # Your code goes here...
+  def self.template(template_type)
+    File.join(File.dirname(__FILE__), 'visual_poetry', 'templates', "#{template_type}.template")
+  end
 end

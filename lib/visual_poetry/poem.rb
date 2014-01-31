@@ -18,4 +18,16 @@ class VisualPoetry::Poem
   def text
     @fragments.map(&:content).join(' ')
   end
+
+  def css
+    css_content = File.readlines(VisualPoetry.template('css')).map(&:rstrip)
+    css_content << ""
+    @fragments.each do |fragment|
+      css_content << "##{fragment.id} {"
+      css_content << "  top: #{fragment.position[1]}px;"
+      css_content << "  left: #{fragment.position[0]}px;"
+      css_content << "}\n"
+    end
+    css_content.join("\n")
+  end
 end
