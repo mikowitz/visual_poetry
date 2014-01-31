@@ -34,8 +34,8 @@ describe VisualPoetry::Poem do
     expect(@poem1.text).to eq 'As I sd to my friend, because I am always talking,--John, I'
   end
 
-  it '#css_file should return a .css file with the proper content' do
-    css_file = @poem1.css_file
+  it '#css_file should return a .css file with the proper content', :files do
+    css_file = @poem1.css_file('spec/generated_files/test')
     expect(css_file).to be_the_same_file_as fixture_file_path('test.css')
   end
 end
