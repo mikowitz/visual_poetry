@@ -41,8 +41,8 @@ end
 
 
 describe VisualPoetry::Fragment, '#id' do
-  it 'should be the content stripped of all markup and non-word-characters' do
-    fragment = create_fragment("<span class=fancy>this 'ere is a full-sentence.</span>")
+  it 'should be the content downcased and stripped of all markup and non-word-characters' do
+    fragment = create_fragment("<span class=fancy>This 'ere is a full-sentence.</span>")
 
     expect(fragment.id).to eq 'thisereisafullsentence'
   end

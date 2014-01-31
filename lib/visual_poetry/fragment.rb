@@ -20,7 +20,7 @@ class VisualPoetry::Fragment
   end
 
   def set_id
-    id = @content.gsub(/<[^>]*>|\W/, '')
+    id = @content.downcase.gsub(/<[^>]*>|\W/, '')
     if @@ids.keys.include? id
       id += (@@ids[id] += 1).to_s
     else
