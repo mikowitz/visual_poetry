@@ -21,12 +21,9 @@ class VisualPoetry::Poem
 
   def css
     css_content = File.readlines(VisualPoetry.template('css')).map(&:rstrip)
-    css_content << ""
     @fragments.each do |fragment|
-      css_content << "##{fragment.id} {"
-      css_content << "  top: #{fragment.position[1]}px;"
-      css_content << "  left: #{fragment.position[0]}px;"
-      css_content << "}\n"
+      css_content << ''
+      css_content << fragment.css
     end
     css_content.join("\n")
   end

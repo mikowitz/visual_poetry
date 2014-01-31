@@ -36,7 +36,7 @@ describe VisualPoetry::Poem do
 
   it '#css should return a stylesheet with the default class transform values and positions for the fragments' do
     css = @poem1.css
-    css_file = File.read(fixture_file_path('test.css'))
+    css_file = File.read(fixture_file_path('test.css')).rstrip
     expect(css).to eq css_file
   end
 end

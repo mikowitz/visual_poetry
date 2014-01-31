@@ -10,6 +10,15 @@ class VisualPoetry::Fragment
     @@ids = {}
   end
 
+  def css
+    [
+      "##{id} {",
+      "  top: #{position[1]}px;",
+      "  left: #{position[0]}px;",
+      "}"
+    ].join("\n")
+  end
+
   private
 
   def parse_arguments(args)
